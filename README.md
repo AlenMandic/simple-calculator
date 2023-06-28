@@ -1,4 +1,4 @@
 # simple-calculator
-My attempt at re-creating a simple calculator, design inspired from WebDevSimplified on youtube. All code is my own.
+My attempt at making my own  simple calculator
 
 LIVE demo: https://codepen.io/alen1234/full/poQvdmQ
