@@ -30,7 +30,9 @@ class Calculator {
      this.currentOperand = this.currentOperand + number   // we append the clicked number to currentOperand on every click. 
     }
 
-    chooseOperation(operation) { 
+    chooseOperation(operation) {
+     if(this.currentOperandText.textContent === "") return
+     
      this.operation = operation
      this.previousOperandText.textContent = currentOperandText.textContent.toString() + " " + operation.toString()
      this.previousOperand = this.previousOperandText.textContent;
@@ -39,7 +41,7 @@ class Calculator {
 
     compute() { 
      let result = eval(this.previousOperand.split(this.operation).join("") + this.operation + " " + this.currentOperand)
-     this.currentOperand = result;
+     this.currentOperand = new Intl.NumberFormat().format(result);
      this.previousOperand = ""
      this.operation = undefined
     }
