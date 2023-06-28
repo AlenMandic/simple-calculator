@@ -36,6 +36,10 @@ class Calculator {
      this.operation = operation
      this.previousOperandText.textContent = currentOperandText.textContent.toString() + " " + operation.toString()
      this.previousOperand = this.previousOperandText.textContent;
+     if(this.previousOperand.includes(",")) {
+        this.previousOperand = this.previousOperand.replace(/,/g, ""); // replace every instance of "," to not break the eval.
+     }
+
      this.currentOperand = ""
     }
 
